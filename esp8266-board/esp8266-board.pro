@@ -1,4 +1,4 @@
-update=Monday, November 06, 2017 'PMt' 03:55:03 PM
+update=Saturday, November 11, 2017 'PMt' 12:51:26 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,5 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=/Users/benvh/projects/esp8266-board/kicad/libraries/kicad-ESP8266/ESP8266
+LibName31=/Users/benvh/projects/esp8266-board/kicad/libraries/Voltage Regulators/voltage-regulators
+LibName32=/Users/benvh/projects/kicad-libraries/Switches/switches_inputs
