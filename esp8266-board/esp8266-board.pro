@@ -1,4 +1,4 @@
-update=Saturday, November 11, 2017 'PMt' 12:51:26 PM
+update=Sat 11 Nov 2017 03:37:53 PM EST
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=/home/benvh/projects/kicad-library
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -58,6 +58,5 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=/Users/benvh/projects/esp8266-board/kicad/libraries/kicad-ESP8266/ESP8266
-LibName31=/Users/benvh/projects/esp8266-board/kicad/libraries/Voltage Regulators/voltage-regulators
-LibName32=/Users/benvh/projects/kicad-libraries/Switches/switches_inputs
+LibName30=Switches/switches_inputs
+LibName31=Voltage Regulators/voltage-regulators
