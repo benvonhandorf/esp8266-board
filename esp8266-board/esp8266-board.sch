@@ -434,7 +434,6 @@ NoConn ~ 4850 3600
 NoConn ~ 4750 3600
 NoConn ~ 4650 3600
 NoConn ~ 4550 3600
-NoConn ~ 9750 1550
 Text GLabel 1950 2400 0    60   Input ~ 0
 ADC
 Text GLabel 1950 2500 0    60   Input ~ 0
@@ -827,16 +826,18 @@ F 3 "" H 9300 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C?
+L CP C5
 U 1 1 5A0D9E48
 P 4750 4450
-F 0 "C?" V 4600 4450 50  0000 L CNN
+F 0 "C5" V 4600 4450 50  0000 L CNN
 F 1 "300uF" H 4650 4250 50  0000 L CNN
-F 2 "" H 4788 4300 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D8.0mm_P5.00mm" H 4788 4300 50  0001 C CNN
 F 3 "" H 4750 4450 50  0001 C CNN
 	1    4750 4450
 	0    -1   -1   0   
 $EndComp
 Connection ~ 4900 4150
 Connection ~ 4600 4150
+Wire Wire Line
+	9750 1450 9750 1550
 $EndSCHEMATC
