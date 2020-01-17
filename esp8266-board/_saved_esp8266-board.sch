@@ -1,37 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:switches_inputs
-LIBS:voltage-regulators
+EESchema Schematic File Version 4
 LIBS:esp8266-board-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -46,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ESP-12E U1
+L esp8266-board-rescue:ESP-12E U1
 U 1 1 5A00CD38
 P 4800 2700
 F 0 "U1" H 4800 2600 50  0000 C CNN
@@ -57,7 +26,7 @@ F 3 "" H 4800 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L StepDown-3A J2
+L voltage-regulators:StepDown-3A J2
 U 1 1 5A00ECE4
 P 8750 4400
 F 0 "J2" H 8750 4400 60  0000 C CNN
@@ -68,7 +37,7 @@ F 3 "" H 8750 4400 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L USB_OTG J4
+L esp8266-board-rescue:USB_OTG J4
 U 1 1 5A00ED3B
 P 9850 2250
 F 0 "J4" H 9650 2700 50  0000 L CNN
@@ -79,7 +48,7 @@ F 3 "" H 10000 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 5A00ED9B
 P 9900 2850
 F 0 "#PWR01" H 9900 2600 50  0001 C CNN
@@ -94,7 +63,7 @@ Wire Wire Line
 Wire Wire Line
 	9850 2850 9900 2850
 $Comp
-L +5V #PWR02
+L power:+5V #PWR02
 U 1 1 5A00EDDB
 P 10300 2050
 F 0 "#PWR02" H 10300 1900 50  0001 C CNN
@@ -107,7 +76,7 @@ $EndComp
 Wire Wire Line
 	10150 2050 10300 2050
 $Comp
-L +5V #PWR03
+L power:+5V #PWR03
 U 1 1 5A00EE6B
 P 8700 5300
 F 0 "#PWR03" H 8700 5150 50  0001 C CNN
@@ -118,7 +87,7 @@ F 3 "" H 8700 5300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 5A00EE90
 P 8800 5100
 F 0 "#PWR04" H 8800 4850 50  0001 C CNN
@@ -131,7 +100,7 @@ $EndComp
 Wire Wire Line
 	8700 4850 8700 5300
 $Comp
-L +3V3 #PWR05
+L power:+3V3 #PWR05
 U 1 1 5A00EEDD
 P 9150 4900
 F 0 "#PWR05" H 9150 4750 50  0001 C CNN
@@ -142,7 +111,7 @@ F 3 "" H 9150 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Barrel_Jack J5
+L esp8266-board-rescue:Barrel_Jack J5
 U 1 1 5A00EF7E
 P 10050 1550
 F 0 "J5" H 10050 1760 50  0000 C CNN
@@ -153,7 +122,7 @@ F 3 "" H 10100 1510 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR06
+L power:+5V #PWR06
 U 1 1 5A00EFBC
 P 9450 1650
 F 0 "#PWR06" H 9450 1500 50  0001 C CNN
@@ -166,7 +135,7 @@ $EndComp
 Wire Wire Line
 	9450 1650 9750 1650
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 5A00EFE9
 P 9300 1450
 F 0 "#PWR07" H 9300 1200 50  0001 C CNN
@@ -179,7 +148,7 @@ $EndComp
 Wire Wire Line
 	9300 1450 9750 1450
 $Comp
-L GND #PWR08
+L power:GND #PWR08
 U 1 1 5A00F04B
 P 5900 3100
 F 0 "#PWR08" H 5900 2850 50  0001 C CNN
@@ -190,7 +159,7 @@ F 3 "" H 5900 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR09
+L power:+3V3 #PWR09
 U 1 1 5A00F06B
 P 3250 3100
 F 0 "#PWR09" H 3250 2950 50  0001 C CNN
@@ -203,9 +172,9 @@ $EndComp
 Wire Wire Line
 	3250 3100 3900 3100
 Wire Wire Line
-	5700 3100 6100 3100
+	5700 3100 5900 3100
 $Comp
-L +3V3 #PWR010
+L power:+3V3 #PWR010
 U 1 1 5A00F0AA
 P 3450 2400
 F 0 "#PWR010" H 3450 2250 50  0001 C CNN
@@ -216,7 +185,7 @@ F 3 "" H 3450 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L esp8266-board-rescue:R R1
 U 1 1 5A00F0E8
 P 3650 2400
 F 0 "R1" V 3730 2400 50  0000 C CNN
@@ -233,14 +202,11 @@ Wire Wire Line
 Wire Wire Line
 	3500 2400 3450 2400
 Wire Wire Line
-	8800 4850 8800 5100
-Connection ~ 8800 5050
-Wire Wire Line
 	9150 4900 8900 4900
 Wire Wire Line
 	8900 4900 8900 4850
 $Comp
-L C C2
+L voltage-regulators:C C2
 U 1 1 5A010134
 P 4750 4150
 F 0 "C2" H 4775 4250 50  0000 L CNN
@@ -259,7 +225,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 4150 3900 3100
 $Comp
-L +3V3 #PWR011
+L power:+3V3 #PWR011
 U 1 1 5A01021B
 P 6500 2800
 F 0 "#PWR011" H 6500 2650 50  0001 C CNN
@@ -270,7 +236,7 @@ F 3 "" H 6500 2800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R4
+L esp8266-board-rescue:R R4
 U 1 1 5A010263
 P 6350 2800
 F 0 "R4" V 6430 2800 50  0000 C CNN
@@ -285,7 +251,7 @@ Text GLabel 6200 2800 1    60   Input ~ 0
 Wire Wire Line
 	5700 2800 6200 2800
 $Comp
-L R R5
+L esp8266-board-rescue:R R5
 U 1 1 5A0108BC
 P 6350 2900
 F 0 "R5" V 6430 2900 50  0000 C CNN
@@ -300,7 +266,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 2900 5700 2900
 $Comp
-L R R3
+L esp8266-board-rescue:R R3
 U 1 1 5A0109BD
 P 5950 3000
 F 0 "R3" V 6030 3000 50  0000 C CNN
@@ -316,7 +282,7 @@ Connection ~ 5900 3100
 Wire Wire Line
 	5800 3000 5700 3000
 $Comp
-L R R2
+L esp8266-board-rescue:R R2
 U 1 1 5A010A6F
 P 3650 2600
 F 0 "R2" V 3730 2600 50  0000 C CNN
@@ -355,7 +321,7 @@ GPIO12
 Text GLabel 3900 3000 0    60   Input ~ 0
 GPIO13
 $Comp
-L Conn_01x05 J1
+L esp8266-board-rescue:Conn_01x05 J1
 U 1 1 5A0111F1
 P 6550 4900
 F 0 "J1" H 6550 5200 50  0000 C CNN
@@ -366,7 +332,7 @@ F 3 "" H 6550 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR012
+L power:GND #PWR012
 U 1 1 5A01125D
 P 5850 4700
 F 0 "#PWR012" H 5850 4450 50  0001 C CNN
@@ -383,7 +349,7 @@ TX
 Text GLabel 6350 4900 0    60   Input ~ 0
 RX
 $Comp
-L Conn_01x04 J3
+L esp8266-board-rescue:Conn_01x04 J3
 U 1 1 5A011626
 P 3750 6700
 F 0 "J3" H 3750 6900 50  0000 C CNN
@@ -394,7 +360,7 @@ F 3 "" H 3750 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR013
+L power:GND #PWR013
 U 1 1 5A0117FF
 P 3100 6700
 F 0 "#PWR013" H 3100 6450 50  0001 C CNN
@@ -411,9 +377,9 @@ GPIO4
 Wire Wire Line
 	3100 6700 3550 6700
 Wire Wire Line
-	3150 6600 3550 6600
+	3150 6600 3350 6600
 $Comp
-L Jumper_NO_Small JP1
+L esp8266-board-rescue:Jumper_NO_Small JP1
 U 1 1 5A0119F3
 P 2350 3800
 F 0 "JP1" H 2350 3880 50  0000 C CNN
@@ -454,7 +420,7 @@ NoConn ~ 10150 2450
 NoConn ~ 9750 2650
 NoConn ~ 8600 4850
 $Comp
-L C C1
+L voltage-regulators:C C1
 U 1 1 5A012B7F
 P 4750 3850
 F 0 "C1" H 4775 3950 50  0000 L CNN
@@ -465,11 +431,11 @@ F 3 "" H 4750 3850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4900 3850 4900 4450
+	4900 3850 4900 4150
 Wire Wire Line
-	4600 3850 4600 4450
+	4600 3850 4600 4150
 $Comp
-L ROTARY_ENCODER_W_SPST S1
+L switches_inputs:ROTARY_ENCODER_W_SPST S1
 U 1 1 5A074E2B
 P 4200 5000
 F 0 "S1" H 4200 5200 60  0000 C CNN
@@ -480,7 +446,7 @@ F 3 "" H 4050 4850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR014
+L power:GND #PWR014
 U 1 1 5A074EAE
 P 4200 5350
 F 0 "#PWR014" H 4200 5100 50  0001 C CNN
@@ -491,7 +457,7 @@ F 3 "" H 4200 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3750 5350 5000 5350
+	3750 5350 4200 5350
 Wire Wire Line
 	3750 5350 3750 5100
 Wire Wire Line
@@ -506,7 +472,7 @@ GPIO12
 Text GLabel 4600 4900 2    60   Input ~ 0
 GPIO13
 $Comp
-L +3V3 #PWR015
+L power:+3V3 #PWR015
 U 1 1 5A0763B7
 P 6700 4000
 F 0 "#PWR015" H 6700 3850 50  0001 C CNN
@@ -521,7 +487,7 @@ GPIO4
 Text GLabel 6300 4150 0    60   Input ~ 0
 GPIO5
 $Comp
-L R R6
+L esp8266-board-rescue:R R6
 U 1 1 5A0768D9
 P 6500 4000
 F 0 "R6" V 6580 4000 50  0000 C CNN
@@ -532,7 +498,7 @@ F 3 "" H 6500 4000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R7
+L esp8266-board-rescue:R R7
 U 1 1 5A0768E1
 P 6500 4150
 F 0 "R7" V 6580 4150 50  0000 C CNN
@@ -563,7 +529,7 @@ Wire Notes Line
 Text Notes 6100 3800 0    60   ~ 0
 i2c resistors
 $Comp
-L Jumper_NO_Small JP3
+L esp8266-board-rescue:Jumper_NO_Small JP3
 U 1 1 5A0894A6
 P 3350 6500
 F 0 "JP3" H 3350 6580 50  0000 C CNN
@@ -574,7 +540,7 @@ F 3 "" H 3350 6500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Jumper_NO_Small JP2
+L esp8266-board-rescue:Jumper_NO_Small JP2
 U 1 1 5A08975F
 P 3150 6500
 F 0 "JP2" H 3150 6580 50  0000 C CNN
@@ -586,7 +552,7 @@ F 3 "" H 3150 6500 50  0001 C CNN
 $EndComp
 Connection ~ 3350 6600
 $Comp
-L +5V #PWR016
+L power:+5V #PWR016
 U 1 1 5A08984D
 P 3350 6400
 F 0 "#PWR016" H 3350 6250 50  0001 C CNN
@@ -597,7 +563,7 @@ F 3 "" H 3350 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR017
+L power:+3V3 #PWR017
 U 1 1 5A08989B
 P 3150 6400
 F 0 "#PWR017" H 3150 6250 50  0001 C CNN
@@ -620,7 +586,7 @@ Power Input
 Text Notes 9150 3800 0    60   ~ 0
 Voltage Regulation\nPopulate only one
 $Comp
-L AMS1117-3.3 U3
+L voltage-regulators:AMS1117-3.3 U3
 U 1 1 5A0C88E6
 P 9800 4250
 F 0 "U3" H 9900 4000 50  0000 C CNN
@@ -631,7 +597,7 @@ F 3 "" H 9900 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR018
+L power:+5V #PWR018
 U 1 1 5A0C895B
 P 9350 4250
 F 0 "#PWR018" H 9350 4100 50  0001 C CNN
@@ -642,7 +608,7 @@ F 3 "" H 9350 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3V3 #PWR019
+L power:+3V3 #PWR019
 U 1 1 5A0C89C1
 P 10300 4250
 F 0 "#PWR019" H 10300 4100 50  0001 C CNN
@@ -653,7 +619,7 @@ F 3 "" H 10300 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR020
+L power:GND #PWR020
 U 1 1 5A0C8A20
 P 9800 4700
 F 0 "#PWR020" H 9800 4450 50  0001 C CNN
@@ -670,7 +636,7 @@ Wire Wire Line
 Wire Wire Line
 	10100 4250 10300 4250
 $Comp
-L AP2112 U2
+L voltage-regulators:AP2112 U2
 U 1 1 5A0C8E30
 P 9550 5850
 F 0 "U2" H 9550 5500 60  0000 C CNN
@@ -681,7 +647,7 @@ F 3 "" H 9350 5850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR021
+L power:+5V #PWR021
 U 1 1 5A0C8F35
 P 8800 5700
 F 0 "#PWR021" H 8800 5550 50  0001 C CNN
@@ -692,7 +658,7 @@ F 3 "" H 8800 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR022
+L power:GND #PWR022
 U 1 1 5A0C8F77
 P 9000 5850
 F 0 "#PWR022" H 9000 5600 50  0001 C CNN
@@ -707,7 +673,7 @@ Wire Wire Line
 Wire Wire Line
 	8800 5700 9100 5700
 $Comp
-L +3V3 #PWR023
+L power:+3V3 #PWR023
 U 1 1 5A0C912A
 P 10250 5700
 F 0 "#PWR023" H 10250 5550 50  0001 C CNN
@@ -720,7 +686,7 @@ $EndComp
 Wire Wire Line
 	10000 5700 10250 5700
 $Comp
-L R R8
+L esp8266-board-rescue:R R8
 U 1 1 5A0C9334
 P 8800 5850
 F 0 "R8" V 8880 5850 50  0000 C CNN
@@ -760,7 +726,7 @@ Deep sleep wakeup enable jumper
 Text Notes 2750 6150 0    60   ~ 0
 Populate only one power jumper
 $Comp
-L C C3
+L voltage-regulators:C C3
 U 1 1 5A087306
 P 9400 5000
 F 0 "C3" V 9450 5050 50  0000 L CNN
@@ -771,7 +737,7 @@ F 3 "" H 9400 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +3V3 #PWR024
+L power:+3V3 #PWR024
 U 1 1 5A0CC7AF
 P 9550 5000
 F 0 "#PWR024" H 9550 4850 50  0001 C CNN
@@ -782,7 +748,7 @@ F 3 "" H 9550 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR025
+L power:GND #PWR025
 U 1 1 5A0CC7F1
 P 9250 5000
 F 0 "#PWR025" H 9250 4750 50  0001 C CNN
@@ -793,7 +759,7 @@ F 3 "" H 9250 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR026
+L power:+5V #PWR026
 U 1 1 5A0CCFB7
 P 9300 2050
 F 0 "#PWR026" H 9300 1900 50  0001 C CNN
@@ -804,7 +770,7 @@ F 3 "" H 9300 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR027
+L power:GND #PWR027
 U 1 1 5A0CCFF9
 P 9300 2350
 F 0 "#PWR027" H 9300 2100 50  0001 C CNN
@@ -815,7 +781,7 @@ F 3 "" H 9300 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L voltage-regulators:C C4
 U 1 1 5A0CD03B
 P 9300 2200
 F 0 "C4" H 9325 2300 50  0000 L CNN
@@ -826,7 +792,7 @@ F 3 "" H 9300 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C5
+L esp8266-board-rescue:CP C5
 U 1 1 5A0D9E48
 P 4750 4450
 F 0 "C5" V 4600 4450 50  0000 L CNN
@@ -840,4 +806,16 @@ Connection ~ 4900 4150
 Connection ~ 4600 4150
 Wire Wire Line
 	9750 1450 9750 1550
+Wire Wire Line
+	5900 3100 6100 3100
+Wire Wire Line
+	4200 5350 5000 5350
+Wire Wire Line
+	3350 6600 3550 6600
+Wire Wire Line
+	4900 4150 4900 4450
+Wire Wire Line
+	4600 4150 4600 4450
+Wire Wire Line
+	8800 4850 8800 5100
 $EndSCHEMATC

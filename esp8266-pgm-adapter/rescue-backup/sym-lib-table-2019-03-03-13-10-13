@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name esp8266-pgm-adapter-rescue)(type Legacy)(uri ${KIPRJMOD}/esp8266-pgm-adapter-rescue.lib)(options "")(descr ""))
+  (lib (name switches_inputs)(type Legacy)(uri /home/benvh/projects/kicad-library/Switches/switches_inputs.lib)(options "")(descr ""))
+)
